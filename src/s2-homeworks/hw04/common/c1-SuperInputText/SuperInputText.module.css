@@ -1,20 +1,45 @@
-.input:focus {
+.input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-.input {
+.input:focus {
+    border-color: #06C;
 }
 
 .inputWrapper {
+    margin-bottom: 20px;
 }
 
 .superInput {
+    border: 2px solid #06C;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.superInput:focus {
+    border-color: #045a8d;
 }
 
 .errorInput {
+    border: 2px solid #cc0000;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
 .errorInput:focus {
+    border-color: #a50000;
 }
 
 .error {
+    color: #cc0000;
+    font-size: 14px;
+    margin-top: 5px;
 }
