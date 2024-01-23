@@ -1,25 +1,70 @@
+/* Стили для боковой панели */
 .sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: white; /* Белый фон боковой панели */
+    position: fixed;
+    left: -250px;
+    transition: left 0.3s ease;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Добавим тень для эффекта поднятости */
 }
 
+/* Стили для открытой боковой панели */
 .sidebar.open {
+    left: 0;
+    z-index: 10;
 }
 
+/* Фоновое затемнение при открытой боковой панели */
 .background {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
+/* Обновленные стили для навигации */
 .nav {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Обновленные стили для ссылок в навигации */
 .nav a {
+    text-decoration: none;
+    color: black; /* Черный цвет шрифта */
+    padding: 10px;
+    transition: color 0.3s ease; /* Плавный переход цвета шрифта */
+    margin-bottom: 10px;
 }
 
+/* Эффект при наведении на ссылку */
 .nav a:hover {
+    color: #00f; /* Голубой цвет шрифта при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
 
+/* Активная ссылка */
 .nav a.active {
-}
-.close {
+    color: #00f; /* Голубой цвет шрифта для активной ссылки */
+    background-color: white; /* Белый фон для активной ссылки */
 }
 
+/* Стили для кнопки закрытия */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer; /* Задаем указатель мыши в виде руки при наведении на кнопку */
+}
+
+/* Стили для изображения кнопки закрытия */
 .close img {
+    width: 20px;
+    height: 20px;
 }
