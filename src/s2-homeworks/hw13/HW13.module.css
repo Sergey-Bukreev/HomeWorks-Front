@@ -1,22 +1,53 @@
-.buttonsContainer {
+.hw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.responseContainer {
+.hw .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
-.imageContainer {
+.hw .responseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-.image {
+.hw .imageContainer {
+    margin-bottom: 20px;
 }
 
-.textContainer{
+.hw .image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.code {
+.hw .textContainer {
+    text-align: left;
 }
 
-.text {
+.hw .code {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-.info {
+
+.hw .text {
+    margin-bottom: 10px;
+}
+
+.hw .info {
+
 }
