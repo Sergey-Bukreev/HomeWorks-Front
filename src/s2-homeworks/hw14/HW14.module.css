@@ -1,7 +1,20 @@
 .tech {
+    margin: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    width: 100%;
 
 }
 
 .loading {
-
+    margin-top: 10px;
+    font-weight: bold;
+}
+.hw {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
 }
