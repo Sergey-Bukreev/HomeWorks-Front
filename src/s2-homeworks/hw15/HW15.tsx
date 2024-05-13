@@ -52,7 +52,11 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                if (res) {
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                }
+                setLoading(false)
                 // сохранить пришедшие данные
 
                 //
@@ -64,10 +68,16 @@ const HW15 = () => {
 
         // setPage(
         // setCount(
-
+        setPage(newPage)
+        setCount(newCount)
         // sendQuery(
         // setSearchParams(
-
+        setSearchParams({
+            ...Object.fromEntries(searchParams),
+            page: newPage.toString(),
+            count: newCount.toString(),
+        })
+        sendQuery({ page: newPage, count: newCount })
         //
     }
 
@@ -76,10 +86,14 @@ const HW15 = () => {
 
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
-
+        setSort(newSort)
         // sendQuery(
         // setSearchParams(
-
+        setSearchParams({
+            ...Object.fromEntries(searchParams),
+            sort: newSort
+        })
+        sendQuery({ sort: newSort, page: 1, count })
         //
     }
 
@@ -91,7 +105,7 @@ const HW15 = () => {
     }, [])
 
     const mappedTechs = techs.map(t => (
-        <div key={t.id} className={s.row}>
+        <div key={t.id} className={s2.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
             </div>
@@ -102,11 +116,12 @@ const HW15 = () => {
         </div>
     ))
 
+
     return (
         <div id={'hw15'}>
-            <div className={s2.hwTitle}>Homework #15</div>
+            <div className={s.hwTitle}>Homework #15</div>
 
-            <div className={s2.hw}>
+            <div className={s.hw}>
                 {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
 
                 <SuperPagination

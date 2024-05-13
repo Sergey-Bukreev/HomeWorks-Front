@@ -1,11 +1,16 @@
 .pagination {
     display: flex;
+
+
 }
 
 .text1 {
-
+    margin-right: 5px;
+    color: black;
+    text-align: center;
 }
 
 .text2 {
-
+    margin-left: 5px;
+    color: black;
 }
